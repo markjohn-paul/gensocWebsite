@@ -1,0 +1,168 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/portfolio-details.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <meta name="description" content="BookCard - Responsive HTML5 vCard Template">
+    <meta name="keywords" content="vcard, html5, portfolio">
+    <meta name="author" content="Pixelwars">
+    
+    <title>Global Media Cultures - Bookcard vCard Template</title> 
+
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png"/>
+    
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/modernizr.js"></script> 
+    <!--[if lte IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/selectivizr-min.js"></script>
+    <![endif]-->    
+    
+     <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One|Nixie+One|Raleway:200,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tulpen+One|Sacramento' rel='stylesheet' type='text/css'>
+        
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/book.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+    
+    
+    <!-- SCRIPTS -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script>
+    	$(function() { 
+            $(".portfolio-single").fitVids(); 
+            
+            // Parallax effect
+            $(window).scroll(function() {
+                var scrolled = $(this).scrollTop();
+                var parallax = $('.parallax-hero-faith');
+                var speed = scrolled * 0.5;
+                
+                // Apply parallax to background image
+                parallax.find('.hero-bg-image img').css('transform', 'translateY(' + speed + 'px)');
+            });
+            
+            // Animation for section transitions
+            function checkSectionTransitions() {
+                var heroSection = $('.parallax-hero-faith');
+                var sectionTwo = $('.parallax-section-two');
+                var windowTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                
+                // Second section animation (hero to section two)
+                var heroBottom = heroSection.offset().top + heroSection.height();
+                var sectionTwoTop = sectionTwo.offset().top;
+                
+                var transitionStart = heroBottom - windowHeight;
+                var transitionEnd = sectionTwoTop;
+                var scrollProgress = (windowTop - transitionStart) / (transitionEnd - transitionStart);
+                
+                if (scrollProgress >= 0.3 && scrollProgress <= 1) {
+                    $('.section-text').addClass('animate');
+                    $('.section-element-image').addClass('animate');
+                }
+                
+                if (scrollProgress < 0.2) {
+                    $('.section-text').removeClass('animate');
+                    $('.section-element-image').removeClass('animate');
+                }
+            }
+            
+            // Check on scroll
+            $(window).on('scroll', checkSectionTransitions);
+            checkSectionTransitions(); // Check immediately
+        })
+    </script>
+    
+</head>
+
+<body class="p-single">
+    
+    <!-- PORTFOLIO-NAV - column 4/12 -->
+    <div class="span4 portfolio-field portfolio-nav">
+        <a class="icon button prev ajax" href="portfolio-item-01.html"></a>
+        <a class="icon button back" href="index.html">close</a>
+        <a class="icon button next ajax" href="portfolio-item-03.html"></a>
+    </div>
+    <!-- PORTFOLIO-NAV - column 4/12 -->
+    
+    <!-- PORTFOLIO SINGLE CONTENT -->
+    <div class="portfolio-single">
+        <!-- PARALLAX HERO SECTION -->
+        <section class="parallax-hero-faith">
+            <div class="parallax-overlay"></div>
+            
+            <!-- Hero Background Image -->
+            <div class="hero-bg-image">
+                <img src="images/site/BehindaYoungManSmileBG.png" alt="Behind a Young Man's Smile Background">
+            </div>
+            
+            <!-- Hero Element Image -->
+            <div class="hero-element-image">
+                <img src="images/site/BehindaYoungManElement.png" alt="Behind a Young Man's Smile Element">
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="hero-content-faith">
+                <div class="author-tag">Faith Carpua</div>
+                <h1 class="hero-title-faith">Behind a Young<br>Man's Smile</h1>
+            </div>
+        </section>
+        
+        <!-- SECOND PARALLAX SECTION -->
+        <section class="parallax-section-two">
+            <!-- Background Image -->
+            <div class="section-bg-image">
+                <img src="images/site/BehindaYoungManSmile2ndBG.png" alt="Behind a Young Man's Smile Second Background">
+            </div>
+            
+            <div class="container">
+                <!-- Element Image -->
+                <div class="section-element-image">
+                    <img src="images/site/BehindaYoungManSmile2ndElement.png" alt="Behind a Young Man's Smile Second Element">
+                </div>
+                
+                <div class="section-content">
+                    <div class="section-text">
+                        <p>At first glance, Khent is just an ordinary young man—smart, polite, kind, and has a happy aura. But behind his smiles to many people, questions, whispers, and judgments about him cannot be avoided: "Are you gay?"</p>
+                        
+                        <p>I first met him in senior high school. We quickly became close, maybe because of his positive energy.</p>
+                        
+                        <p>But I also couldn't help but notice some aspects of his behavior, sometimes with a mixture of arrogance when he achieved a success that he seemed to mention repeatedly.</p>
+                        
+                        <p>And another thing, I noticed that he seemed soft when he acted, especially in the eyes of many. Many say or spread that he may not be a real man.</p>
+                        
+                        <p>I know he hears the questions. But sometimes he doesn't say anything formally about it, because what people say about him is not true. For him, what Khent, has and how many people see the true nature of his personality is enough.</p>
+                        
+                        <p>I admit, I also went through doubts. That, maybe? But as our relationship deepened, I got to know Khent better, not based on his actions or movements, but on the depth of his thoughts and his honesty with himself.</p>
+                        
+                        <p>Khent reminds us that not all personality is measured by movement or voice. True personality is seen in respect and honesty towards oneself.</p>
+                        
+                        <p>But on his face, full of smiles to many, I also noticed that he is tired of hearing the questions repeatedly. Tired of a world with a narrow understanding.</p>
+                        
+                        <p>Just because we don't see the standard man that Khent has doesn't mean he's gay. There are really other men who move softly but are real men</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- END PORTFOLIO SINGLE CONTENT -->
+    
+</body>
+<!-- InstanceEnd --></html>

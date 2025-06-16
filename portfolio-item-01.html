@@ -1,0 +1,186 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/portfolio-details.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <meta name="description" content="BookCard - Responsive HTML5 vCard Template">
+    <meta name="keywords" content="vcard, html5, portfolio">
+    <meta name="author" content="Pixelwars">
+    
+    <title>Global Media Cultures - Bookcard vCard Template</title> 
+
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png"/>
+    
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/modernizr.js"></script> 
+    <!--[if lte IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/selectivizr-min.js"></script>
+    <![endif]-->    
+    
+     <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One|Nixie+One|Raleway:200,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tulpen+One|Sacramento' rel='stylesheet' type='text/css'>
+        
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/book.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+    
+    
+    <!-- SCRIPTS -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script>
+    	$(function() { 
+            $(".portfolio-single").fitVids(); 
+            
+            // Parallax effect
+            $(window).scroll(function() {
+                var scrolled = $(this).scrollTop();
+                var parallax = $('.parallax-hero');
+                var speed = scrolled * 0.5;
+                
+                parallax.css('background-position', 'center ' + speed + 'px');
+            });
+            
+            // Animation for section transitions
+            function checkSectionTransitions() {
+                var heroSection = $('.parallax-hero');
+                var sectionTwo = $('.parallax-section-two');
+                var sectionThree = $('.parallax-section-three');
+                var windowTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                
+                // Second section animation (hero to section two)
+                var heroBottom = heroSection.offset().top + heroSection.height();
+                var sectionTwoTop = sectionTwo.offset().top;
+                
+                var transitionStart = heroBottom - windowHeight;
+                var transitionEnd = sectionTwoTop;
+                var scrollProgress = (windowTop - transitionStart) / (transitionEnd - transitionStart);
+                
+                if (scrollProgress >= 0.3 && scrollProgress <= 1) {
+                    $('.section-text').addClass('animate');
+                    $('.studio-image').addClass('animate');
+                }
+                
+                if (scrollProgress < 0.2) {
+                    $('.section-text').removeClass('animate');
+                    $('.studio-image').removeClass('animate');
+                }
+                
+                // Third section animation (section two to section three)
+                var sectionTwoBottom = sectionTwo.offset().top + sectionTwo.height();
+                var sectionThreeTop = sectionThree.offset().top;
+                
+                var transitionStartThree = sectionTwoBottom - windowHeight;
+                var transitionEndThree = sectionThreeTop;
+                var scrollProgressThree = (windowTop - transitionStartThree) / (transitionEndThree - transitionStartThree);
+                
+                if (scrollProgressThree >= 0.3 && scrollProgressThree <= 1) {
+                    $('.parallax-section-three .section-text').addClass('animate');
+                    $('.parallax-section-three .studio-image').addClass('animate');
+                }
+                
+                if (scrollProgressThree < 0.2) {
+                    $('.parallax-section-three .section-text').removeClass('animate');
+                    $('.parallax-section-three .studio-image').removeClass('animate');
+                }
+            }
+            
+            // Check on scroll
+            $(window).on('scroll', checkSectionTransitions);
+            checkSectionTransitions(); // Check immediately
+        })
+    </script>
+    
+</head>
+
+<body class="p-single">
+    
+    <!-- PORTFOLIO-NAV - column 4/12 -->
+    <div class="span4 portfolio-field portfolio-nav">
+        <a class="icon button prev ajax" href="portfolio-item-04.html"></a>
+        <a class="icon button back" href="index.html">close</a>
+        <a class="icon button next ajax" href="portfolio-item-02.html"></a>
+    </div>
+    <!-- PORTFOLIO-NAV - column 4/12 -->
+    
+    <!-- PORTFOLIO SINGLE CONTENT -->
+    <div class="portfolio-single">
+        <!-- PARALLAX HERO SECTION -->
+        <section class="parallax-hero">
+            <div class="parallax-overlay"></div>
+            
+            <!-- Floating Social Icons -->
+            <div class="social-icons">
+                <div class="social-icon like">👍</div>
+                <div class="social-icon heart">❤️</div>
+                <div class="social-icon like">👍</div>
+                <div class="social-icon heart">❤️</div>
+                <div class="social-icon like">👍</div>
+                <div class="social-icon heart">❤️</div>
+                <div class="social-icon like">👍</div>
+                <div class="social-icon heart">❤️</div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">GLOBAL<br>MEDIA<br>CULTURES</h1>
+                <p class="hero-subtitle">GLOBAL MEDIA'S INFLUENCE IN<br>SHAPING THE FILIPINO<br>CULTURE</p>
+                <div class="hero-author">MARY GRACE LUMBES</div>
+            </div>
+        </section>
+        
+        <!-- SECOND PARALLAX SECTION -->
+        <section class="parallax-section-two">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-text">
+                        <p>In today's interconnected world, the influence of media is undeniable, especially among the youth. A large percentage of young people spend their days scrolling through Instagram feeds, double-tapping on the latest P-pop posts, or watching trending TikTok videos. With just a few taps, they consume global content that introduces them to diverse cultures, values, and ideas. But this exposure brings us up an important question: how does this affect cultural identity and preservation?</p>
+                        
+                        <p>Global media cultures play a crucial role in shaping transnational networks, social economies, and even political structures. Through digital platforms and social media they are not just entertainment tools but they are also a powerful influence in reshaping the cultural landscape of Filipinos. The rapid advancement of technology has made cultural change worldwide, with cell phones, television, and the internet making information more accessible than ever. From ancient oral storytelling to the digital age, each phase of media evolution has redefined how society expresses its values and traditions.</p>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="images/site/globalmedia2ndpage.png" alt="Global Media Culture Impact" class="studio-image">
+                </div>
+            </div>
+        </section>
+        
+        <!-- THIRD PARALLAX SECTION -->
+        <section class="parallax-section-three">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-text">
+                        <p>The discussions of cultural imperialism in global media examine the dominance of Western media and its capacity to overshadow local cultures. Indigenous customs, languages, and values are increasingly in danger of being undermined by Western narratives and ideas that permeate on screens worldwide. Local cultures are not powerless, however, they have any influence. Like many others, Filipino communities are actively reinterpreting and adapting influences from around the world to create distinctive mixtures that honor both tradition and creativity. This dynamic interaction of native and local elements demonstrates the Filipino's spirit of resilience and creativity.</p>
+                        
+                        <p>Having critical thinking and media literacy are essential components of this process. Through engaging consciously with media content of global narratives, individuals can highly appreciate the maintaining sense of cultural identity by actively interacting with media contents.</p>
+                        
+                        <p>In conclusion, in global media it continuously shapes the perceptions and interactions of people, by embracing the true richness of global narratives safeguarding the local traditions with a more inclusive and diverse culture of generations.</p>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="images/site/globalmedia3rdpage.png" alt="Cultural Imperialism and Local Adaptation" class="studio-image">
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- END PORTFOLIO SINGLE CONTENT -->
+
+</body>
+<!-- InstanceEnd --></html>

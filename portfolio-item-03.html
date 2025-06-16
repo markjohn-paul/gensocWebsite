@@ -1,0 +1,212 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/portfolio-details.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <meta name="description" content="BookCard - Responsive HTML5 vCard Template">
+    <meta name="keywords" content="vcard, html5, portfolio">
+    <meta name="author" content="Pixelwars">
+    
+    <title>Unequal. Unseen. Unspoken - Bookcard vCard Template</title> 
+
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png"/>
+    
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/modernizr.js"></script> 
+    <!--[if lte IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/selectivizr-min.js"></script>
+    <![endif]-->    
+    
+     <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One|Nixie+One|Raleway:200,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tulpen+One|Sacramento' rel='stylesheet' type='text/css'>
+        
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/book.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+    
+    
+    <!-- SCRIPTS -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script>
+    	$(function() { 
+            $(".portfolio-single").fitVids(); 
+            
+            // Parallax effect
+            $(window).scroll(function() {
+                var scrolled = $(this).scrollTop();
+                var parallax = $('.parallax-hero-unequal');
+                var speed = scrolled * 0.5;
+                
+                parallax.css('background-position', 'center ' + speed + 'px');
+            });
+            
+            // Animation for section transitions
+            function checkSectionTransitions() {
+                var heroSection = $('.parallax-hero-unequal');
+                var sectionTwo = $('.parallax-section-two-unequal');
+                var sectionThree = $('.parallax-section-three-unequal');
+                var windowTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                
+                // Second section animation (hero to section two)
+                var heroBottom = heroSection.offset().top + heroSection.height();
+                var sectionTwoTop = sectionTwo.offset().top;
+                
+                var transitionStart = heroBottom - windowHeight;
+                var transitionEnd = sectionTwoTop;
+                var scrollProgress = (windowTop - transitionStart) / (transitionEnd - transitionStart);
+                
+                if (scrollProgress >= 0.3 && scrollProgress <= 1) {
+                    $('.section-text-right-unequal').addClass('animate');
+                    $('.studio-image-left-unequal').addClass('animate');
+                }
+                
+                if (scrollProgress < 0.2) {
+                    $('.section-text-right-unequal').removeClass('animate');
+                    $('.studio-image-left-unequal').removeClass('animate');
+                }
+                
+                // Third section animation (section two to section three)
+                var sectionTwoBottom = sectionTwo.offset().top + sectionTwo.height();
+                var sectionThreeTop = sectionThree.offset().top;
+                
+                var transitionStartThree = sectionTwoBottom - windowHeight;
+                var transitionEndThree = sectionThreeTop;
+                var scrollProgressThree = (windowTop - transitionStartThree) / (transitionEndThree - transitionStartThree);
+                
+                if (scrollProgressThree >= 0.3 && scrollProgressThree <= 1) {
+                    $('.section-text-left-unequal').addClass('animate');
+                    $('.studio-image-right-unequal').addClass('animate');
+                }
+                
+                if (scrollProgressThree < 0.2) {
+                    $('.section-text-left-unequal').removeClass('animate');
+                    $('.studio-image-right-unequal').removeClass('animate');
+                }
+            }
+            
+            // Check on scroll
+            $(window).on('scroll', checkSectionTransitions);
+            checkSectionTransitions(); // Check immediately
+        })
+    </script>
+    
+</head>
+
+<body class="p-single">
+    
+    <!-- PORTFOLIO-NAV - column 4/12 -->
+    <div class="span4 portfolio-field portfolio-nav">
+        <a class="icon button prev ajax" href="portfolio-item-02.html"></a>
+        <a class="icon button back" href="index.html">close</a>
+        <a class="icon button next ajax" href="portfolio-item-04.html"></a>
+    </div>
+    <!-- PORTFOLIO-NAV - column 4/12 -->
+    
+    <!-- PORTFOLIO SINGLE CONTENT -->
+    <div class="portfolio-single">
+        <!-- PARALLAX HERO SECTION -->
+        <section class="parallax-hero-unequal">
+            <div class="parallax-overlay"></div>
+            
+            <!-- Floating Overlay Image -->
+            <div class="floating-overlay">
+                <img src="images/site/previewOverlay.png" alt="Unequal Unseen Unspoken Overlay">
+            </div>
+        </section>
+        
+        <!-- SECOND PARALLAX SECTION -->
+        <section class="parallax-section-two-unequal">
+            <div class="container">
+                <!-- Left Image -->
+                <div class="section-image-left-unequal">
+                    <img src="images/site/personLeft.png" alt="Person silhouette" class="studio-image-left-unequal">
+                </div>
+                
+                <!-- Right Content -->
+                <div class="section-content-right-unequal">
+                    <div class="section-text-right-unequal">
+                        <p>Have you ever seen a woman walking home at night with her keys clenched between her fingers? Not because she's forgetful — but because she's scared.</p>
+                        
+                        <p>It's not paranoia. It's preparation.</p>
+                        
+                        <p>This is one of the many things women carry every day. Not just books and bags — but fear. Awareness. The burden of being told, "Be careful," instead of the world being told, "Don't hurt."</p>
+                        
+                        <p>Gender inequality is not always loud. It's not just about laws or slogans. Sometimes, it's about the daily dance women and gender minorities perform just to feel safe, seen, or respected.</p>
+                        
+                        <p>A crowded bus, a teenage girl clutches her bag tighter, turns away from a man who's standing too close. She war wants to speak up, but doesn't. Because we taught her to stay quiet — not him to back off.</p>
+                        
+                        <p>In an office, a woman's idea ignored.</p>
+                        
+                        <p>Minutes later, a man repeats it and gets applause. She smiles anyway, because she's been taught that being "too assertive" makes her "unpleasant."</p>
+                        
+                        <p style="margin-top: 2em;">In school, a young gay student lowers his voice when speaking in public. He's learned the hard way that his softness makes him a target.</p>
+                        
+                        <p>These are not isolated events. They are patterns. Patterns so common that they become invisible – unless you're the one living them</p>
+                        
+                        <p style="margin-top: 2em;"><strong>We need to rethink how we define inequality.</strong></p>
+                        <p><strong>It's not just about numbers or salaries.</strong></p>
+                        <p><strong>It's in who feels safe walking home.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THIRD PARALLAX SECTION -->
+        <section class="parallax-section-three-unequal">
+            <div class="container">
+                <!-- Right Image -->
+                <div class="section-image-right-unequal">
+                    <img src="images/site/personRight.png" alt="Person silhouette right" class="studio-image-right-unequal">
+                </div>
+                
+                <!-- Left Content -->
+                <div class="section-content-left-unequal">
+                    <div class="section-text-left-unequal">
+                        <p>Who's interrupted more in meetings.</p>
+                        <p>Who's expected to "adjust," to "wait their turn," to "prove their worth."</p>
+                        
+                        <p style="margin-top: 1.5em;">We teach girls to protect themselves — but not boys to unlearn entitlement.</p>
+                        <p>We say "all genders are equal" — but laugh at jokes that reduce women to punchlines, or call effeminate boys weak.</p>
+                        <p>We post #Empowerment — but ignore the subtle sexism in our own homes, classrooms, and conversations.</p>
+                        
+                        <p style="margin-top: 1.5em;"><strong>So what do we do?</strong></p>
+                        <p>We start seeing what's always been there.</p>
+                        <p>We speak when it's inconvenient.</p>
+                        <p>We believe people when they say they're uncomfortable — even when it doesn't seem like a big deal to us.</p>
+                        <p>Because it is a big deal to them.</p>
+                        
+                        <p style="margin-top: 2em;">Gender inequality doesn't always wear a banner or hold a protest sign.</p>
+                        <p>Sometimes, it walks quietly beside you, waiting for you to notice.</p>
+                        
+                        <div class="quote-section" style="margin-top: 3em;">
+                            <blockquote>
+                                <p style="font-size: 1.4em; font-style: italic;">"And when you finally do — don't look away."</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- END PORTFOLIO SINGLE CONTENT -->
+
+</body>
+<!-- InstanceEnd --></html>
